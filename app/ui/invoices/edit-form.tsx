@@ -142,6 +142,13 @@ export default function EditInvoiceForm({
               ))}
           </div>
         </fieldset>
+        <div aria-live="polite" aria-atomic="true">
+          {state.message ? (
+            <p className="mt-2 text-sm text-red-500">
+              {state.message}
+            </p>
+          ) : null}
+        </div>
       </div>
       <div className="mt-6 flex justify-end gap-4">
         <Link
@@ -155,4 +162,3 @@ export default function EditInvoiceForm({
     </form>
   );
 }
-// how do I get the message for the whole thing that "Missing fields. Failed to update invoice"?
